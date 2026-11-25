@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mojibake-fixer"
+version = "0.1.0"
+description = "猜编码、修乱码的教学用玩具版（chardet / ftfy 的迷你实现）"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Gongxi8cai" }]
+keywords = ["encoding", "mojibake", "chardet", "ftfy", "learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Text Processing",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+mojibake-fixer = "mojibake_fixer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
